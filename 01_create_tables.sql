@@ -5,8 +5,8 @@ CREATE TABLE empleados (
     salario NUMERIC
 );
 CREATE TABLE equipo (
-    matricula VARCHAR(6) PRIMARY KEY,
-    apellido VARCHAR(100) NOT NULL,
+    Matrícula VARCHAR(6) PRIMARY KEY,
+    Apellido VARCHAR(100) NOT NULL,
     team INTEGER 
 );
 
