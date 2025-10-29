@@ -7,6 +7,6 @@ CREATE TABLE empleados (
 
 
 CREATE TABLE compañeros (
-    matricula VARCHAR(20) PRIMARY KEY,
-    apellido VARCHAR(100)
+    Matrícula VARCHAR(20) PRIMARY KEY,
+    Apellido VARCHAR(100)
 );
