@@ -28,10 +28,10 @@ def test_vista_matriculas():
     )
     cur = conn.cursor()
     cur.execute("SELECT * FROM vista_matriculas;")
-    resultados = cur.fetchall()
-    assert len(resultados) == 2  
-    matriculas = [fila[0] for fila in resultados]
-    assert '182239' in matriculas
+    resultados2 = cur.fetchall()
+    assert len(resultados2) == 2  
+    matriculas = [fila2[0] for fila2 in resultados2]
     assert '179804' in matriculas
+    assert '182239' in matriculas
     cur.close()
     conn.close()
