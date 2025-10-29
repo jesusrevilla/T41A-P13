@@ -30,7 +30,7 @@ def test_vista_equipo():
     cur.execute("SELECT * FROM vista_equipo;")
     resultados = cur.fetchall()
     assert len(resultados) == 6  # Solo Luis y María están en TI
-    nombres = [fila[0] for fila in resultados]
+    nombres = [fila[1] for fila in resultados]
     assert 'Quintanilla' in nombres
     assert 'Domínguez' in nombres
     assert 'Gámez' in nombres
