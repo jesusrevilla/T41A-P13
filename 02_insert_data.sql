@@ -4,3 +4,15 @@ INSERT INTO empleados (nombre, departamento, salario) VALUES
 ('María', 'TI', 65000),
 ('Carlos', 'Ventas', 55000),
 ('Elena', 'RRHH', 48000);
+
+\copy alumnos FROM 'lista.csv' DELIMITER ',' CSV HEADER;
+
+INSERT INTO equipos(nombre) VALUES ('Queso Extra');
+
+INSERT INTO integrantesEquipos(id_equipo, matricula_alumno) VALUES 
+  (1,179761),
+  (1,182934),
+  (1,182451),
+  (1,182829),
+  (1,181914),
+  (1,182085);
