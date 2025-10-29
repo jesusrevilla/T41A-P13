@@ -1,4 +1,4 @@
-\copy equipo FROM 'lista.csv' DELIMITER ',' CSV HEADER;
+\copy equipo FROM '$GITHUB_WORKSPACE/lista.csv' DELIMITER ',' CSV HEADER;
 
 UPDATE equipo
 SET team  = '1'
