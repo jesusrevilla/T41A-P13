@@ -25,14 +25,14 @@ def test_integrante_equipo():
         host='localhost',
         port='5432'
     )
-    cur = conn.cursor()
-    cur.execute("SELECT * FROM integrante_equipo ;")
-    result = cur.fetchall()
+    curr = conn.cursor()
+    curr.execute("SELECT * FROM integrante_equipo ;")
+    result = curr.fetchall()
     assert len(result) == 4 # 4 miembros
     apellidos = [fila[0] for fila in result]
     assert 'Domínguez' in apellidos
     assert 'Gámez' in apellidos
     assert 'García' in apellidos
     assert 'Martínez' in apellidos
-    cur.close()
+    curr.close()
     conn.close()
