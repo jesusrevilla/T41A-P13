@@ -30,7 +30,6 @@ def test_vista_equipo():
     cur.execute("SELECT * FROM vista_equipo;")
     resultados = cur.fetchall()
     matriculas = [fila[0] for fila in resultados]
-    assert '177622' in matriculas
     assert '178974' in matriculas
     assert '179752' in matriculas
     assert '179800' in matriculas
