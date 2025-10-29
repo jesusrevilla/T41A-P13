@@ -1,5 +1,3 @@
-\COPY datos(Matrícula, Apellido) FROM 'lista.csv' WITH (FORMAT CSV, HEADER TRUE, DELIMITER ',');
-
 INSERT INTO empleados (nombre, departamento, salario) VALUES
 ('Ana', 'Ventas', 50000),
 ('Luis', 'TI', 60000),
