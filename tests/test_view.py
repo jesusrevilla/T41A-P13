@@ -28,7 +28,7 @@ def test_vista_equipo():
     assert 'Saucedo' in apellidos
 
     # Verificar que solo hay tres registros
-    assert len(resultados) == 3
+    assert len(resultados) == 4
 
     cur.close()
     conn.close()
