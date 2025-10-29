@@ -7,6 +7,6 @@ CREATE TABLE empleados (
 CREATE TABLE equipo (
     matricula VARCHAR(6) PRIMARY KEY,
     apellido VARCHAR(100) NOT NULL,
-    equi INTEGER 
+    team INTEGER 
 );
 
