@@ -1,9 +1,10 @@
-CREATE VIEW vista_ti AS
-SELECT nombre
-FROM empleados
-WHERE departamento='TI';
 
-CREATE VIEW vista_equipo AS
-SELECT *
-FROM alumno_equipo
-WHERE equipo=1;
+CREATE OR REPLACE VIEW vista_cachorritas AS
+SELECT matricula, apellido
+FROM lista
+WHERE equipo = 'Cachorritas';
+
+CREATE OR REPLACE VIEW vista_ti AS
+SELECT nombre, departamento, salario
+FROM empleados
+WHERE departamento = 'TI';
