@@ -15,7 +15,7 @@ def test_vista_ti():
     nombres = [fila[0] for fila in resultados]
     assert 'Luis' in nombres
     assert 'María' in nombres
-        cur.execute("SELECT * FROM integrante_equipo ;")
+    cur.execute("SELECT * FROM integrante_equipo ;")
     resultados = cur.fetchall()
     assert len(resultados) == 4 # Solo Luis y María están en TI
     apellidos = [fila[1] for fila in resultados]
