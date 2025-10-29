@@ -28,7 +28,7 @@ def test_integrante_equipo():
     cur = conn.cursor()
     cur.execute("SELECT * FROM integrante_equipo ;")
     result = cur.fetchall()
-    assert len(result) == 4 # Solo Luis y María están en TI
+    assert len(result) == 4 # 4 miembros
     apellidos = [fila[0] for fila in result]
     assert 'Domínguez' in apellidos
     assert 'Gámez' in apellidos
