@@ -4,8 +4,8 @@ def test_vista_mi_equipo():
     
     conn = psycopg2.connect(
         dbname='test_db',
-        user='postgres',
-        password='postgres',
+        user='runner',
+        password='password',
         host='localhost',
         port='5432'
     )
