@@ -7,4 +7,4 @@ INSERT INTO empleados (nombre, departamento, salario) VALUES
 ('Elena', 'RRHH', 48000);
 
 
-\copy companeros(matricula, apellido) FROM :'path_to_csv' DELIMITER E'\t' CSV;
+\copy companeros(matricula, apellido) FROM 'lista.csv' (FORMAT TEXT, DELIMITER E'\t');
