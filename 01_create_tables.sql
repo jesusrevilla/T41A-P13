@@ -4,3 +4,4 @@ CREATE TABLE empleados (
     departamento VARCHAR(50),
     salario NUMERIC
 );
+\copy lista FROM 'lista.csv' DELIMITER ',' CSV HEADER;
