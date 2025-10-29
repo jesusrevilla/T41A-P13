@@ -1,49 +1,26 @@
 
-INSERT INTO lista (matricula, apellido, equipo) VALUES
-(175329, 'Casanova', 'Otros'),
-(179752, 'Castillo', 'Cachorritas'),
-(178920, 'Castro', 'Otros'),
-(177622, 'Cruz', 'Cachorritas'),
-(177700, 'De La Rosa', 'Otros'),
-(179761, 'Domínguez', 'Otros'),
-(182934, 'Gámez', 'Otros'),
-(182451, 'García', 'Otros'),
-(178666, 'García', 'Otros'),
-(179862, 'García', 'Otros'),
-(183016, 'Godinez', 'Otros'),
-(179804, 'González', 'Otros'),
-(182483, 'Guerrero', 'Cachorritas'),
-(179169, 'Hernández', 'Otros'),
-(176453, 'Ibarra', 'Otros'),
-(171513, 'Jasso', 'Otros'),
-(179827, 'López', 'Otros'),
-(183213, 'López', 'Otros'),
-(182239, 'López', 'Otros'),
-(182570, 'Marin', 'Otros'),
-(182829, 'Martínez', 'Otros'),
-(181730, 'Martínez', 'Cachorritas'),
-(174117, 'Martínez', 'Otros'),
-(179859, 'Mendoza', 'Otros'),
-(177139, 'Moreno', 'Otros'),
-(182085, 'Ornelas', 'Otros'),
-(178561, 'Palau', 'Otros'),
-(174197, 'Palencia', 'Otros'),
-(181662, 'Pineda', 'Otros'),
-(179800, 'Pulido', 'Cachorritas'),
-(181914, 'Quintanilla', 'Otros'),
-(177888, 'Rodríguez', 'Otros'),
-(178584, 'Rodríguez', 'Otros'),
-(177406, 'Salinas', 'Otros'),
-(182712, 'Sánchez', 'Otros'),
-(178974, 'Saucedo', 'Cachorritas'),
-(174653, 'Verástegui', 'Otros'),
-(183060, 'Vidales', 'Cachorritas'),
-(178218, 'Zúñiga', 'Otros');
+CREATE TEMP TABLE lista_temp (
+    matricula INT,
+    apellido VARCHAR(100)
+);
 
--- Insertar empleados para la vista TI
+
+\copy lista_temp FROM 'lista.csv' DELIMITER ',' CSV HEADER;
+
+INSERT INTO lista (matricula, apellido)
+SELECT matricula, apellido
+FROM lista_temp;
+
+UPDATE lista
+SET equipo = CASE
+    WHEN matricula IN (179800,181730,179752,183060,182483,178974,177622) THEN 'Cachorritas'
+    ELSE 'Otros'
+END;
+
 INSERT INTO empleados (nombre, departamento, salario) VALUES
 ('Luis', 'TI', 60000),
 ('María', 'TI', 65000),
 ('Ana', 'Ventas', 50000),
 ('Carlos', 'Ventas', 55000),
 ('Elena', 'RRHH', 48000);
+
