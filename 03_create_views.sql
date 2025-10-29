@@ -4,6 +4,6 @@ FROM empleados
 WHERE departamento='TI';
 
 CREATE VIEW integrante_equipo AS
-SELECT matricula, apellido
+SELECT  apellido
 FROM equipo
 WHERE team = 1;
