@@ -27,9 +27,9 @@ def test_vista_equipo():
         port='5432'
     )
     cur = conn.cursor()
-    cur.execute("SELECT * FROM alumnos;")
+    cur.execute("SELECT * FROM vista_equipo;")
     resultados = cur.fetchall()
-    assert len(resultados) == 6  # Solo Luis y María están en TI
+    assert len(resultados) == 6  
     nombres = [fila[1] for fila in resultados]
     assert 'Quintanilla' in nombres
     assert 'Domínguez' in nombres
