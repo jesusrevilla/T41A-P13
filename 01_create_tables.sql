@@ -5,8 +5,17 @@ CREATE TABLE empleados (
     salario NUMERIC
 );
 
-CREATE TABLE lista(
-    matricula INT PRIMARY KEY,
-    apellido VARCHAR(10),
-    grupo VARCHAR(10)
+CREATE TABLE equipos(
+  id_equipo INT PRIMARY KEY,
+  nombre_equipo VARCHAR(100) NOT NULL
+);
+
+CREATE TABLE alumnos(
+  matricula VARCHAR(6) PRIMARY KEY,
+  apellido VARCHAR(100) NOT NULL
+);
+
+CREATE TABLE alumno_equipo(
+    matricula VARCHAR(6) references alumnos(matricula),
+    equipo int references equipos(id_equipo)
 );
