@@ -15,7 +15,7 @@ CREATE TABLE equipos(
   nombre TEXT NOT NULL
 );
 
-CREATE TABLE integrantes(
+CREATE TABLE integrantesEquipos(
   id_equipo INTEGER NOT NULL REFERENCES equipos(id),
   matricula_alumno INTEGER NOT NULL REFERENCES alumnos(matricula),
   PRIMARY KEY (id_equipo, matricula_alumno),
