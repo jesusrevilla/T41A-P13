@@ -1,1 +1,7 @@
+CREATE VIEW vista_ti AS SELECT nombre FROM empleados WHERE departamento='TI';
 
+CREATE VIEW vista_equipo AS
+SELECT a.matricula, a.apellido 
+FROM integrantesEquipos i 
+JOIN alumnos a 
+ON i.matricula_alumno = a.matricula; 
