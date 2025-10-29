@@ -48,7 +48,7 @@ jobs:
 
     - name: Insert data
       run: |
-        PGPASSWORD=postgres psql -h localhost -U postgres -d test_db -f 02_insert_data.sql      
+        PGPASSWORD=postgres psql -h localhost -U postgres -d test_db -v path_to_csv="${{ github.workspace }}/lista.csv" -f ${{ github.workspace }}/02_insert_data.sql     
 
     - name: Create views
       run: |
