@@ -1,3 +1,5 @@
+\copy compañeros (matrícula, apellido) FROM 'lista.csv' DELIMITER ',' CSV HEADER;
+
 INSERT INTO empleados (nombre, departamento, salario) VALUES
 ('Ana', 'Ventas', 50000),
 ('Luis', 'TI', 60000),
@@ -8,4 +10,4 @@ INSERT INTO empleados (nombre, departamento, salario) VALUES
 
 --\COPY compañeros (matricula, apellido) FROM 'lista.csv' WITH (FORMAT CSV, HEADER TRUE, DELIMITER ',';
 --COPY compañeros (matricula, apellido) FROM '/lista.csv' DELIMITER ',' CSV HEADER;
-\copy compañeros (matricula, apellido) FROM 'lista.csv' DELIMITER ',' CSV HEADER;
+--\copy compañeros (matricula, apellido) FROM 'lista.csv' DELIMITER ',' CSV HEADER;
