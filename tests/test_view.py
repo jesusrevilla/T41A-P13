@@ -26,4 +26,4 @@ def test_vista_equipo():
     assert 'García' in apellidos
     assert 'Saucedo' in apellidos
 
-    assert len(resultados) == 3
+    assert len(resultados) == 4
