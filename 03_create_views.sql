@@ -5,5 +5,5 @@ WHERE departamento='TI';
 
 CREATE VIEW vista_equipo AS
 SELECT *
-FROM alumnos
+FROM alumno_equipo
 WHERE equipo=1;
