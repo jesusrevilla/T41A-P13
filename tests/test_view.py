@@ -31,7 +31,7 @@ def test_vista_matriculas():
     resultados = cur.fetchall()
     assert len(resultados) == 2  
     matriculas = [fila[0] for fila in resultados]
-    assert '182239' in matricuals
+    assert '182239' in matriculas
     assert '179804' in matriculas
     cur.close()
     conn.close()
