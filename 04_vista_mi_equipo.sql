@@ -1,0 +1,20 @@
+CREATE TABLE lista (
+    matricula VARCHAR(10) PRIMARY KEY,
+    apellido VARCHAR(50),
+);
+
+COPY lista(matricula, apellido)
+FROM 'lista.csv' DELIMITER ',' CSV HEADER;
+
+CREATE VIEW vista_equipo_yaz AS
+SELECT matricula, apellido FROM lista
+WHERE matricula IN (
+    '179752',
+    '177622',
+    '182483',
+    '182712',
+    '183060',
+    '179800',
+    '181730'
+);
+
