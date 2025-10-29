@@ -36,7 +36,7 @@ INSERT INTO empleados (nombre, departamento, salario) VALUES
 ('Carlos', 'Ventas', 55000),
 ('Elena', 'RRHH', 48000);
 ```
-Creamos una vista `vista_ti` para ver solo empleados del departamento de TI:
+Crea una vista `vista_ti` para ver solo empleados del departamento de TI y observa si pasa la prueba incluida
 
 ## 3. Genera la vista de tu equipo
 1. Crea una tabla o varias tablas con la matrícula de tus compañeros, el apellido y el número de su equipo ó nombre del equipo, utiliza el archivo lista.csv para cargar los datos
