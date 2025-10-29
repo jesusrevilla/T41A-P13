@@ -1,2 +1,7 @@
 -- Cargar datos desde CSV
-\copy equipo FROM 'tests/lista.csv' DELIMITER E'\t' CSV HEADER;
+INSERT INTO empleados (nombre, departamento, salario) VALUES
+('Ana', 'Ventas', 50000),
+('Luis', 'TI', 60000),
+('María', 'TI', 65000),
+('Carlos', 'Ventas', 55000),
+('Elena', 'RRHH', 48000);
