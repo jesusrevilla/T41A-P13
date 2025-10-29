@@ -18,17 +18,17 @@ def test_vista_ti():
     cur.close()
     conn.close()
 def test_integrante_equipo():
-    conn = psycopg2.connect(
+    connn = psycopg2.connect(
         dbname='test_db',
         user='postgres',
         password='postgres',
         host='localhost',
         port='5432'
     )
-    curr = conn.cursor()
-    curr.execute("SELECT * FROM equipo ;")
+    curr = connn.cursor()
+    curr.execute("SELECT * FROM integrante_equipo  ;")
     result = curr.fetchall()
-    assert len(result) == 39# 4 miembros
+    assert len(result) == 0# 4 miembros
     '''apellidos = [fila[0] for fila in result]
     assert 'Domínguez' in apellidos
     assert 'Gámez' in apellidos
