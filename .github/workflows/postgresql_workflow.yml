@@ -49,7 +49,9 @@ jobs:
     - name: Insert data
       run: |
         PGPASSWORD=postgres psql -h localhost -U postgres -d test_db -f 02_insert_data.sql      
-
+    - name: Insert CSV
+      run: |
+        PGPASSWORD=postgres \ psql -h localhost -U postgres -d test_db -c "\copy equipo FROM 'lista.csv' DELIMITER ',' CSV HEADER;"
     - name: Create views
       run: |
         PGPASSWORD=postgres psql -h localhost -U postgres -d test_db -f 03_create_views.sql          
