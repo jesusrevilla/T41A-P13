@@ -7,5 +7,5 @@ INSERT INTO empleados (nombre, departamento, salario) VALUES
 \copy equipo FROM 'lista.csv' DELIMITER ',' CSV HEADER;
 
 UPDATE equipo
-SET equipo = '1'
+SET equi  = 1
 WHERE matricula IN ('182829', '182451', '182934', '179761');  
