@@ -4,12 +4,11 @@ def test_vista_mi_equipo():
     
     conn = psycopg2.connect(
         dbname='test_db',
-        user='runner',
-        password='password',
+        user='postgres',
+        password='postgres',
         host='localhost',
         port='5432'
     )
-    
     cur = conn.cursor()
     cur.execute("SELECT matricula FROM vista_mi_equipo;")
     resultados = cur.fetchall()
