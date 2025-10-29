@@ -10,7 +10,7 @@ CREATE TEMP TABLE lista_temp (
     apellido VARCHAR(100)
 );
 
-CREATE TABLE empleados (
+CREATE TABLE vista_ti (
     id SERIAL PRIMARY KEY,
     nombre VARCHAR(100),
     departamento VARCHAR(50),
