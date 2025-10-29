@@ -39,7 +39,7 @@ INSERT INTO empleados (nombre, departamento, salario) VALUES
 Creamos una vista `vista_ti` para ver solo empleados del departamento de TI:
 
 ## 3. Genera la vista de tu equipo
-1. Crea una tabla con la matrícula de tus compañeros, el nombre y el número de su equipo
+1. Crea una tabla con la matrícula de tus compañeros, el apellido y el número de su equipo ó nombre del equipo
 2. Genera una vista con la matrícula y los nombres solo de tus compañeros de equipo
 3. Agrega la prueba unitaria que valide las matrículas de tus compañeros de equipo
 
