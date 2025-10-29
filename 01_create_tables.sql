@@ -5,3 +5,13 @@ CREATE TABLE empleados (
     salario NUMERIC
 );
 
+CREATE TABLE alumnos (
+    matricula PRIMARY KEY,    
+    apellido VARCHAR(100)
+);
+
+CREATE TABLE equipo6 (
+    matricula PRIMARY KEY,
+    apellido VARCHAR(100), 
+    numero_equipo NUMERIC
+);
