@@ -1,4 +1,4 @@
-CREATE VIEW nombre_vista AS
+CREATE VIEW vista_ti AS
 SELECT columnas
 FROM tabla
 WHERE condiciones;
