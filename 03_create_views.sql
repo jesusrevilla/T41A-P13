@@ -1,3 +1,8 @@
+CREATE OR REPLACE VIEW vista_ti AS
+SELECT nombre
+FROM empleados
+WHERE departamento = 'TI';
+
 CREATE OR REPLACE VIEW vista_cachorritas AS
 SELECT 
     e.matricula,
