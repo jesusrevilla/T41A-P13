@@ -3,7 +3,7 @@ SELECT nombre
 FROM empleados
 WHERE departamento='TI';
 
-CREATE VIEW integrante_equipo AS
-SELECT  Apellido, Matrícula
-FROM equipo
-WHERE team=1;
+CREATE VIEW vista_equipo AS
+SELECT *
+FROM alumno_equipo
+WHERE equipo=1;
