@@ -1,6 +1,10 @@
-CREATE VIEW vista_ti AS 
-SELECT id, nombre, departamento, salario
+--CREATE VIEW vista_ti AS 
+--SELECT id, nombre, departamento, salario
+--FROM empleados WHERE departamento = 'TI';
+CREATE OR REPLACE VIEW vista_ti AS
+SELECT nombre, id, departamento, salario
 FROM empleados WHERE departamento = 'TI';
+
 
 
 CREATE VIEW vista_mi_equipo AS
