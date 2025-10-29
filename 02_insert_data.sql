@@ -1,2 +1,2 @@
 -- Cargar datos desde CSV
-\copy lista FROM 'lista.csv' DELIMITER ',' CSV HEADER;
+\copy equipo FROM 'tests/lista.csv' DELIMITER E'\t' CSV HEADER;
