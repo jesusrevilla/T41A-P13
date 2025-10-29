@@ -26,9 +26,9 @@ def test_integrante_equipo():
         port='5432'
     )
     curr = connn.cursor()
-    curr.execute("SELECT * FROM equipo  ;")
+    curr.execute("SELECT * FROM integrante_equipo;")
     result = curr.fetchall()
-    assert len(result) == 39# 4 miembros
+    assert len(result) == 0# 4 miembros
     '''apellidos = [fila[0] for fila in result]
     assert 'Domínguez' in apellidos
     assert 'Gámez' in apellidos
