@@ -6,7 +6,7 @@ CREATE TABLE empleados (
 );
 
 CREATE TABLE alumnos(
-  matricula SERIAL PRIMARY KEY,
+  matricula TEXT PRIMARY KEY NOT NULL,
   apellido TEXT NOT NULL
 );
 
@@ -17,7 +17,7 @@ CREATE TABLE equipos(
 
 CREATE TABLE integrantesEquipos(
   id_equipo INTEGER NOT NULL REFERENCES equipos(id),
-  matricula_alumno INTEGER NOT NULL REFERENCES alumnos(matricula),
+  matricula_alumno TEXT NOT NULL REFERENCES alumnos(matricula),
   PRIMARY KEY (id_equipo, matricula_alumno),
   UNIQUE (matricula_alumno)
 );
