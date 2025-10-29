@@ -6,6 +6,6 @@ CREATE TABLE empleados (
 );
 
 CREATE TABLE alumnos(
-  matricula INTEGER PRIMARY KEY,
-  apellido VARCHAR(20)
+  Matrícula INTEGER PRIMARY KEY,
+  Apellido VARCHAR(20)
 );
