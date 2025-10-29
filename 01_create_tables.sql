@@ -1,3 +1,4 @@
+-- Crear tabla lista
 CREATE TABLE IF NOT EXISTS lista (
     matricula INT PRIMARY KEY,
     apellido VARCHAR(100),
@@ -10,8 +11,8 @@ CREATE TEMP TABLE lista_temp (
     apellido VARCHAR(100)
 );
 
-CREATE TABLE vista_ti (
-    id SERIAL PRIMARY KEY,
+-- Crear tabla empleados
+CREATE TABLE IF NOT EXISTS empleados (
     nombre VARCHAR(100),
     departamento VARCHAR(50),
     salario NUMERIC
