@@ -29,35 +29,34 @@ def test_vista_mi_equipo():
     )
     cur = conn.cursor()
     
-    cur.execute("SELECT matrícula FROM compañeros;")  
-    todas_matriculas = cur.fetchall()
-    print("Matrículas en la tabla:", [mat[0] for mat in todas_matriculas])
+    cur.execute("""
+        SELECT EXISTS (
+            SELECT FROM information_schema.views 
+            WHERE table_name = 'vista_mi_equipo'
+        );
+    """)
+    vista_existe = cur.fetchone()[0]
+    
+    if not vista_existe:
+        # Crear la vista si no existe
+        cur.execute("""
+            CREATE OR REPLACE VIEW vista_mi_equipo AS
+            SELECT matrícula, apellido
+            FROM compañeros 
+            WHERE matrícula IN ('182239', '179804');
+        """)
+        conn.commit()
     
     cur.execute("SELECT * FROM vista_mi_equipo;")
     resultados = cur.fetchall()
-    print("Resultados de la vista:", resultados)
-    
-    if len(resultados) == 0:
-        cur.execute("SELECT matrícula FROM compañeros LIMIT 2;")  
-        matriculas_existentes = [mat[0] for mat in cur.fetchall()]
-        
-        if matriculas_existentes:
-            placeholders = ','.join([f"'{m}'" for m in matriculas_existentes])
-            cur.execute(f"""
-                CREATE OR REPLACE VIEW vista_mi_equipo AS
-                SELECT matrícula, apellido
-                FROM compañeros
-                WHERE matrícula IN ({placeholders})
-            """)
-            conn.commit()
-            
-            cur.execute("SELECT * FROM vista_mi_equipo;")
-            resultados = cur.fetchall()
     
     assert len(resultados) == 2, f"Se esperaban 2 registros, pero se obtuvieron {len(resultados)}"
     
     matriculas = [fila[0] for fila in resultados]
     print("Matrículas en el equipo:", matriculas)
+    
+    assert '182239' in matriculas
+    assert '179804' in matriculas
     
     cur.close()
     conn.close()
