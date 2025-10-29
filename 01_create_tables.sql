@@ -12,7 +12,7 @@ CREATE TABLE equipos(
 
 CREATE TABLE alumnos(
   matricula VARCHAR(6) PRIMARY KEY,
-  apellido VARCHAR(100) NOT NULL,
+  apellido VARCHAR(100) NOT NULL
 );
 
 CREATE TABLE alumno_equipo(
