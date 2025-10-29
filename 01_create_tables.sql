@@ -5,7 +5,7 @@ CREATE TABLE lista (
     equipo VARCHAR(50)
 );
 
-CREATE TEMP TABLE lista_temp (
+CREATE TABLE lista_temp (
     matricula INT,
     apellido VARCHAR(100)
 );
