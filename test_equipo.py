@@ -23,6 +23,3 @@ def test_vista_mi_equipo():
     
     cur.close()
     conn.close()
-
-if __name__ == "__main__":
-    test_vista_mi_equipo()
