@@ -26,7 +26,7 @@ def test_integrante_equipo():
         port='5432'
     )
     cur = conn.cursor()
-    cur.execute("SELECT * FROM integrante_equipo;")
+    cur.execute("SELECT * FROM integrante_equipo ;")
     resultados = cur.fetchall()
     assert len(resultados) == 4 # Solo Luis y María están en TI
     apellidos = [fila[1] for fila in resultados]
