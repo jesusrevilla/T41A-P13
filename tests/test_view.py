@@ -35,4 +35,4 @@ def test_integrante_equipo():
     assert 'García' in apellidos
     assert 'Martínez' in apellidos'''
     curr.close()
-    conn.close()
+    connn.close()
