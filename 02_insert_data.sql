@@ -6,6 +6,6 @@ INSERT INTO empleados (nombre, departamento, salario) VALUES
 ('Elena', 'RRHH', 48000);
 \copy customers FROM 'lista.csv' DELIMITER ',' CSV HEADER;
 
-UPDATE compañeros
+UPDATE equipo
 SET equipo = '1'
 WHERE matricula IN ('182829', '182451', '182934', '179761');  
