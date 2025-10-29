@@ -1,4 +1,3 @@
-
 \copy lista_temp FROM 'lista.csv' DELIMITER ',' CSV HEADER;
 
 INSERT INTO lista (matricula, apellido, equipo)
