@@ -30,7 +30,9 @@ def test_integrante_equipo():
     resultados = cur.fetchall()
     assert len(resultados) == 4 # Solo Luis y María están en TI
     nombres = [fila[0] for fila in resultados]
+    assert 'Dominguez' in nombres
+    assert 'Gamez' in nombres
     assert 'García' in nombres
-    assert 'María' in nombres
+    assert 'Martínez' in nombres
     cur.close()
     conn.close()
