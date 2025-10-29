@@ -4,3 +4,9 @@ CREATE TABLE empleados (
     departamento VARCHAR(50),
     salario NUMERIC
 );
+
+CREATE TABLE companeros (
+    matricula VARCHAR(10) PRIMARY KEY,
+    apellido VARCHAR(100),
+    equipo VARCHAR(100)
+);
