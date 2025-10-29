@@ -5,7 +5,7 @@ INSERT INTO empleados (nombre, departamento, salario) VALUES
 ('Carlos', 'Ventas', 55000),
 ('Elena', 'RRHH', 48000);
 
-\copy alumnos FROM 'lista.csv' DELIMITER ',' CSV HEADER;
+\copy alumnos(matricula, apellido) FROM 'lista.csv' WITH (FORMAT CSV, HEADER TRUE);
 
 INSERT INTO equipos(nombre) VALUES ('Queso Extra');
 
