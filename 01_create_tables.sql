@@ -4,11 +4,6 @@ CREATE TABLE lista (
     equipo VARCHAR(50)
 );
 
-CREATE TABLE lista_temp (
-    matricula INT,
-    apellido VARCHAR(100)
-);
-
 CREATE TABLE empleados (
     nombre VARCHAR(100),
     departamento VARCHAR(50),
