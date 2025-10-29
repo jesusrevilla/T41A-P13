@@ -7,6 +7,9 @@ FROM empleados WHERE departamento = 'TI';
 
 
 
-CREATE VIEW vista_mi_equipo AS
+--CREATE VIEW vista_mi_equipo AS
+--SELECT matricula, apellido
+--FROM compañeros WHERE matricula IN ('182239', '179804');
+CREATE OR REPLACE VIEW vista_mi_equipo AS
 SELECT matricula, apellido
 FROM compañeros WHERE matricula IN ('182239', '179804');
