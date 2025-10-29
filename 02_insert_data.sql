@@ -1,4 +1,4 @@
-
+-- 1. Datos para la tabla "empleados"
 INSERT INTO empleados (nombre, departamento, salario) VALUES
 ('Ana', 'Ventas', 50000),
 ('Luis', 'TI', 60000),
@@ -6,5 +6,5 @@ INSERT INTO empleados (nombre, departamento, salario) VALUES
 ('Carlos', 'Ventas', 55000),
 ('Elena', 'RRHH', 48000);
 
--- 2. Cargar datos de lista.csv en la tabla "companeros"
-\copy companeros(matricula, apellido) FROM 'lista.csv' DELIMITER ',' CSV;
+
+\copy companeros(matricula, apellido) FROM 'lista.csv' DELIMITER E'\t' CSV;
