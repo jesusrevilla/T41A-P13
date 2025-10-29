@@ -13,6 +13,9 @@ CREATE TABLE equipos(
 CREATE TABLE alumnos(
   matricula VARCHAR(6) PRIMARY KEY,
   apellido VARCHAR(100) NOT NULL,
-  nombre VARCHAR(100) null,
-  equipo INT REFERENCES equipos(id_equipo) null
+);
+
+CREATE TABLE alumno_equipo(
+    matricula VARCHAR(6) references alumnos(matricula),
+    equipo int references equipos(id_equipo)
 );
