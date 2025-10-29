@@ -54,7 +54,7 @@ jobs:
       env:
         PGPASSWORD: postgres
       run: |
-        psql -h localhost -U postgres -d test_db -c "\COPY datos(Matrícula, Apellido) FROM 'lista.csv' WITH (FORMAT CSV, HEADER TRUE, DELIMITER ',');"
+        psql -h localhost -U postgres -d test_db -c "\COPY alumnos(Matrícula, Apellido) FROM 'lista.csv' WITH (FORMAT CSV, HEADER TRUE, DELIMITER ',');"
 
     - name: Create views
       run: |
