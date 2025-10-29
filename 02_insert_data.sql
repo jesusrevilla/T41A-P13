@@ -9,32 +9,10 @@ INSERT INTO empleados (nombre, departamento, salario) VALUES
 
 INSERT INTO equipos values (1,'QUESOEXTRA');
 
-update alumnos set
-nombre='CORAL',
-equipo=1
-where matricula='179761';
-
-update alumnos set
-nombre='BRYAN',
-equipo=1
-where matricula='182934';
-
-update alumnos set
-nombre='FERNANDA',
-equipo=1
-where matricula='182451';
-
-update alumnos set
-nombre='URIEL',
-equipo=1
-where matricula='182829';
-
-update alumnos set
-nombre='YAEL',
-equipo=1
-where matricula='181914';
-
-update alumnos set
-nombre='ANDRE',
-equipo=1
-where matricula='182085';
+INSERT INTO alumno_equipo values
+('179761',1),
+('182934',1),
+('182451',1),
+('182829',1),
+('181914',1),
+('182085',1);
