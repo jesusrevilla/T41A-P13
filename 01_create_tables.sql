@@ -4,9 +4,18 @@ CREATE TABLE empleados (
     departamento VARCHAR(50),
     salario NUMERIC
 );
-CREATE TABLE equipo (
-    Matrícula INTEGER NOT NULL,
-    Apellido VARCHAR(100) NOT NULL,
-    team INTEGER 
+CREATE TABLE equipos(
+  id_equipo INT PRIMARY KEY,
+  nombre_equipo VARCHAR(100) NOT NULL
+);
+
+CREATE TABLE alumnos(
+  matricula VARCHAR(6) PRIMARY KEY,
+  apellido VARCHAR(100) NOT NULL
+);
+
+CREATE TABLE alumno_equipo(
+    matricula VARCHAR(6) references alumnos(matricula),
+    equipo int references equipos(id_equipo)
 );
 
