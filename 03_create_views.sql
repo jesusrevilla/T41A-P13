@@ -1,4 +1,4 @@
 CREATE VIEW vista_ti AS
-SELECT *
+SELECT nombre,departamento
 FROM empleados
 WHERE departamento='TI';
