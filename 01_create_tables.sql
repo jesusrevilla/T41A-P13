@@ -4,3 +4,9 @@ CREATE TABLE empleados (
     departamento VARCHAR(50),
     salario NUMERIC
 );
+
+CREATE TABLE equipos(
+  matricula INTEGER PRIMARY KEY,
+  nombre TEXT NOT NULL,
+  numero_equipo INTEGER
+);
