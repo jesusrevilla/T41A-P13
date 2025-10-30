@@ -10,5 +10,5 @@ INSERT INTO empleados (nombre, departamento, salario) VALUES
 INSERT INTO equipos values (1,'EQU');
 
 INSERT INTO alumno_equipo values
-('174653',1),
-('179862',1);
+('179862',1),
+('174653',1);
