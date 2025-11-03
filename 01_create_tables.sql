@@ -11,7 +11,7 @@ CREATE TABLE alumnos (
 );
 
 CREATE TABLE equipo6 (
-    matricula VARCHAR(20) PRIMARY KEY,
+    matricula VARCHAR(20),
     apellido VARCHAR(100), 
     numero_equipo NUMERIC
 );
