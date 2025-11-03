@@ -6,8 +6,8 @@ CREATE TABLE empleados (
 );
 
 CREATE TABLE alumnos (
-    Matrícula VARCHAR(20),    
-    Apellido VARCHAR(100)
+    matricula VARCHAR(20),    
+    apellido VARCHAR(100)
 );
 
 CREATE TABLE equipo6 (
