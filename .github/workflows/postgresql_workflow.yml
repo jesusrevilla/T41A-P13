@@ -46,9 +46,16 @@ jobs:
       run: |
         PGPASSWORD=postgres psql -h localhost -U postgres -d test_db -f 01_create_tables.sql
 
+    - name: Clean lista.csv (Remove blank lines)
+      run: |
+        echo "Limpiando lista.csv de líneas vacías..."
+        sed -i '/^$/d' lista.csv
+
     - name: Insert data
       run: |
-        PGPASSWORD=postgres PGOPTIONS="-v ON_ERROR_STOP=1" psql -h localhost -U postgres -d test_db -f 02_insert_data.sql     
+        PGPASSWORD=postgres PGOPTIONS="-v ON_ERROR_STOP=1" psql -h localhost -U postgres -d test_db -f 02_insert_data.sql
+
+   
 
     - name: Create views
       run: |
