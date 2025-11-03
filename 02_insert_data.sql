@@ -5,7 +5,7 @@ INSERT INTO empleados (nombre, departamento, salario) VALUES
 ('Carlos', 'Ventas', 55000),
 ('Elena', 'RRHH', 48000);
 
-INSERT INTO compañeros (matrícula, apellido) VALUES
+INSERT INTO alumnos (matrícula, apellido) VALUES
 ('175329', 'Casanova'),
 ('179752', 'Castillo'),
 ('178920', 'Castro'),
