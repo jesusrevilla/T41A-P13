@@ -7,3 +7,11 @@ INSERT INTO empleados (nombre, departamento, salario) VALUES
 
 
 \copy alumnos FROM 'lista.csv' DELIMITER ',' CSV HEADER;
+
+INSERT INTO equipo6(matricula, apellido, numero_equipo) VALUES
+('178920', 'Castro', 6),
+('183016', 'Godinez', 6),
+('182570', 'Marin', 6),
+('178584', 'Rodríguez', 6),
+('177888', 'Rodríguez', 6),
+('175329', 'Casanova', 6);
