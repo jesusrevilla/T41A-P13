@@ -1,1 +1,9 @@
+CREATE VIEW vista_ti AS
+SELECT nombre
+FROM empleados
+WHERE departamento = 'TI';
 
+CREATE VIEW vista_matriculas AS
+SELECT matricula, apellido
+FROM alumnos
+WHERE matricula in ('182239', '179804');
