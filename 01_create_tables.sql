@@ -6,12 +6,12 @@ CREATE TABLE empleados (
 );
 
 CREATE TABLE alumnos (
-    matricula PRIMARY KEY,    
+    matricula VARCHAR(20) PRIMARY KEY,    
     apellido VARCHAR(100)
 );
 
 CREATE TABLE equipo6 (
-    matricula PRIMARY KEY,
+    matricula VARCHAR(20) PRIMARY KEY,
     apellido VARCHAR(100), 
     numero_equipo NUMERIC
 );
