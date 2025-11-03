@@ -40,14 +40,14 @@ def test_vista_mi_equipo():
     if not vista_existe:
         # Crear la vista si no existe
         cur.execute("""
-            CREATE OR REPLACE VIEW vista_mi_equipo AS
+            CREATE OR REPLACE VIEW vista_matriculas AS
             SELECT matrícula, apellido
             FROM alumnos 
             WHERE matrícula IN ('182239', '179804');
         """)
         conn.commit()
     
-    cur.execute("SELECT * FROM vista_mi_equipo;")
+    cur.execute("SELECT * FROM vista_matriculas;")
     resultados = cur.fetchall()
     
     assert len(resultados) == 2, f"Se esperaban 2 registros, pero se obtuvieron {len(resultados)}"
