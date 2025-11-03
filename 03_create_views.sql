@@ -6,4 +6,4 @@ WHERE departamento = 'TI';
 CREATE VIEW vista_matriculas AS
 SELECT matricula, apellido
 FROM alumnos
-WHERE matricula in (179804, 182239);
+WHERE matricula in (182239, 179804);
