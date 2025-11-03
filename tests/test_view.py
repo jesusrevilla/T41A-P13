@@ -41,9 +41,9 @@ def test_vista_mi_equipo():
         # Crear la vista si no existe
         cur.execute("""
             CREATE OR REPLACE VIEW vista_matriculas AS
-            SELECT matrícula, apellido
+            SELECT matricula, apellido
             FROM alumnos 
-            WHERE matrícula IN ('182239', '179804');
+            WHERE matricula IN ('182239', '179804');
         """)
         conn.commit()
     
