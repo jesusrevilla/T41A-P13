@@ -18,7 +18,7 @@ def test_vista_ti():
     cur.close()
     conn.close()
 
-def test_vista_equipo6_por_matricula():
+def test_vista_equipo6():
     conn = psycopg2.connect(
         dbname='test_db',
         user='postgres',
