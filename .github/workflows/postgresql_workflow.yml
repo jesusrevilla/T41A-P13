@@ -49,7 +49,7 @@ jobs:
     - name: Clean lista.csv (Remove blank lines)
       run: |
         echo "Limpiando lista.csv de líneas vacías..."
-        sed -i '/^$/d' lista.csv
+        sed -i '/^[[:space:]]*$/d' lista.csv
 
     - name: Insert data
       run: |
