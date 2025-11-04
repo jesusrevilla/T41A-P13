@@ -17,3 +17,21 @@ def test_vista_ti():
     assert 'María' in nombres
     cur.close()
     conn.close()
+
+def test_vista_grupo():
+    conn = psycopg2.connect(
+        dbname='test_db',
+        user='postgres',
+        password='postgres',
+        host='localhost',
+        port='5432'
+    )
+    cur = conn.cursor()
+    cur.execute("SELECT * FROM cachorrita;")
+    resultados = cur.fetchall()
+    assert len(resultados) == 7  # Integrantes
+    matriculas = [fila[0] for fila in resultados]
+    assert '183213' in matriculas
+    assert '179752' in matriculas
+    cur.close()
+    conn.close()
