@@ -4,3 +4,5 @@ INSERT INTO empleados (nombre, departamento, salario) VALUES
 ('María', 'TI', 65000),
 ('Carlos', 'Ventas', 55000),
 ('Elena', 'RRHH', 48000);
+
+COPY lista(matricula, apellido) FROM 'lista.csv' DELIMITER ',' CSV HEADER;
