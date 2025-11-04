@@ -6,8 +6,10 @@ def test_vista_ti():
         user='postgres',
         password='postgres',
         host='localhost',
-        cur = conn.cursor()
-        cur.execute("SELECT * FROM vista_ti;")
+      port='5432'
+    )
+    cur = conn.cursor()
+    cur.execute("SELECT * FROM vista_ti;")
     resultados = cur.fetchall()
     assert len(resultados) == 2  # Solo Luis y María están en TI
     nombres = [fila[0] for fila in resultados]
