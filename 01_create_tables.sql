@@ -1,4 +1,4 @@
 CREATE TABLE companeros (
-  matricula TEXT PRIMARY KEY,   
-  apellido  TEXT NOT NULL
+    matricula INT PRIMARY KEY,
+    apellido VARCHAR(100)
 );
