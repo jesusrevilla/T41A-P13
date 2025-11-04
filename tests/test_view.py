@@ -13,8 +13,9 @@ def test_vista_equipo():
     # Extraer columnas
     matriculas = [fila[0] for fila in resultados]
     apellidos = [fila[1] for fila in resultados]
+    # Verificar que los tres compañeros del equipo están en la vista
     assert 178561 in matriculas  # Palau
-    assert 176453 in matriculas  # Ibarra
+    assert 176453 in matriculas  # Palau
     assert 178666 in matriculas  # García
     assert 178974 in matriculas  # Saucedo
     assert 'Palau' in apellidos
@@ -22,4 +23,8 @@ def test_vista_equipo():
     assert 'García' in apellidos
     assert 'Saucedo' in apellidos
 
+    # Verificar que solo hay tres registros
     assert len(resultados) == 4
+
+    cur.close()
+    conn.close()
