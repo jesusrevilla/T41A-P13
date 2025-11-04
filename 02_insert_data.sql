@@ -1,6 +1,4 @@
 \encoding UTF8
-
-
-\copy companeros (matricula, apellido)
+\copy public.companeros (matricula, apellido)
 FROM 'lista.csv'
-WITH (FORMAT csv, HEADER true, DELIMITER ',', NULL '', ENCODING 'UTF8');
+WITH (FORMAT csv, HEADER true, DELIMITER ',', NULL '');
