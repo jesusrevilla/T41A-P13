@@ -1,10 +1,4 @@
-CREATE VIEW vista_ti AS
-SELECT
-  CASE c.apellido
-    WHEN 'Casanova' THEN 'Luis'
-    WHEN 'Castillo' THEN 'María'
-  END AS nombre,
-  c.matricula
-FROM companeros c
-WHERE c.apellido IN ('Casanova','Castillo')
-ORDER BY nombre;
+CREATE OR REPLACE VIEW vista_equipo AS
+SELECT matricula, apellido
+FROM companeros
+WHERE matricula IN (178561, 176453, 178666, 178974);
