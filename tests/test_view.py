@@ -27,7 +27,7 @@ def test_vista_grupo():
         port='5432'
     )
     cur = conn.cursor()
-    cur.execute("SELECT * FROM cachorrita;")
+    cur.execute("SELECT * FROM cachorritas;")
     resultados = cur.fetchall()
     assert len(resultados) == 7  # Integrantes
     matriculas = [fila[0] for fila in resultados]
