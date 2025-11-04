@@ -4,7 +4,8 @@ def test_vista_equipo():
     conn = psycopg2.connect(
         dbname='test_db',
         user='postgres',
-	@@ -9,11 +9,21 @@ def test_vista_ti():
+		password='postgres',
+        host='localhost',
         port='5432'
     )
     cur = conn.cursor()
