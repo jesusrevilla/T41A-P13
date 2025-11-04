@@ -17,3 +17,14 @@ def test_vista_ti():
     assert 'María' in nombres
     cur.close()
     conn.close()
+
+    cur = conn.cursor()
+    cur.execute("SELECT * FROM vista_alumnos;")
+    resultados = cur.fetchall()
+    apellidos = [fila[0] for fila in resultados]
+    assert 'Guerrero' in  apellidos
+    assert 'Castillo' in  apellidos
+        assert 'Vidales' in  apellidos
+    cur.close()
+    conn.close()
+
