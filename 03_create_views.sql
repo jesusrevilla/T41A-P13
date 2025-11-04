@@ -1,7 +1,7 @@
 
 CREATE VIEW vista_ti AS
 SELECT 
-    nombre, -- *** Poner 'nombre' como primera columna para que el test_view.py pase ***
+    nombre, 
     id, 
     departamento, 
     salario
