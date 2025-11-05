@@ -11,6 +11,7 @@ def test_vista_ti():
     cur = conn.cursor()
     cur.execute("SELECT * FROM vista_alumnos;")
     resultados = cur.fetchall()
+    print("Resultados de vista_alumnos:", resultados)
     apellidos = [fila[0] for fila in resultados]
     assert 'Guerrero' in  apellidos
     assert 'Castillo' in  apellidos
