@@ -9,6 +9,16 @@ def test_vista_ti():
         port='5432'
     )
     cur = conn.cursor()
+    cur.execute("SELECT * FROM vista_alumnos;")
+    resultados = cur.fetchall()
+    apellidos = [fila[0] for fila in resultados]
+    assert 'Guerrero' in  apellidos
+    assert 'Castillo' in  apellidos
+    assert 'Vidales' in  apellidos
+    cur.close()
+ 
+
+    cur = conn.cursor()
     cur.execute("SELECT * FROM vista_ti;")
     resultados = cur.fetchall()
     assert len(resultados) == 2  # Solo Luis y María están en TI
@@ -17,13 +27,6 @@ def test_vista_ti():
     assert 'María' in nombres
     cur.close()
 
-    cur = conn.cursor()
-    cur.execute("SELECT * FROM vista_alumnos;")
-    resultados = cur.fetchall()
-    apellidos = [fila[0] for fila in resultados]
-    assert 'Guerrero' in  apellidos
-    assert 'Castillo' in  apellidos
-    assert 'Vidales' in  apellidos
-    cur.close()
-    conn.close()
+   conn.close()
+
 
