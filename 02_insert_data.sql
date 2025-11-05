@@ -7,4 +7,5 @@ INSERT INTO empleados (nombre, departamento, salario) VALUES
 
 COPY lista(matricula, apellido)
 FROM '/home/runner/work/T41A-P13/T41A-P13/lista.csv'
-DELIMITER ',' CSV HEADER;
+DELIMITER E'\t'
+CSV HEADER;
