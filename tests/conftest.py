@@ -13,11 +13,10 @@ def _run_sql(cursor, path):
 
 @pytest.fixture(scope="session")
 def db_connection():
-    # Permite configurar por variables de entorno si es necesario
     params = dict(
         dbname=os.getenv("PGDATABASE", "test_db"),
         user=os.getenv("PGUSER", "postgres"),
-        password=os.getenv("PGPASSWORD", ""),
+        password=os.getenv("PGPASSWORD", "postgres"),   # <- FIX: default ahora es postgres
         host=os.getenv("PGHOST", "localhost"),
         port=int(os.getenv("PGPORT", "5432")),
     )
@@ -25,7 +24,7 @@ def db_connection():
     conn.autocommit = True
     cur = conn.cursor()
 
-    # Ejecuta los scripts en orden
+    # Ejecuta los scripts en orden SOLO si no corrieron antes fuera del test
     _run_sql(cur, REPO_ROOT / "01_create_tables.sql")
     _run_sql(cur, REPO_ROOT / "02_insert_data.sql")
     _run_sql(cur, REPO_ROOT / "03_create_views.sql")
