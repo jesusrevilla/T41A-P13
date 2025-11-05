@@ -9,11 +9,25 @@ def test_vista_ti():
         port='5432'
     )
     cur = conn.cursor()
-    cur.execute(\"SELECT * FROM vista_ti;\")
+    cur.execute("SELECT * FROM vista_alumnos;")
+    resultados = cur.fetchall()
+    print("Resultados de vista_alumnos:", resultados)
+    apellidos = [fila[0] for fila in resultados]
+    assert 'Vidales' in  apellidos
+    assert 'Guerrero' in  apellidos
+    assert 'Castillo' in  apellidos
+    cur.close()
+ 
+
+    cur = conn.cursor()
+    cur.execute("SELECT * FROM vista_ti;")
     resultados = cur.fetchall()
     assert len(resultados) == 2  # Solo Luis y María están en TI
     nombres = [fila[0] for fila in resultados]
     assert 'Luis' in nombres
     assert 'María' in nombres
     cur.close()
+
     conn.close()
+
+
