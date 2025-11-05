@@ -57,3 +57,7 @@ jobs:
     - name: Run tests
       run: |
         pytest
+        
+    - name: Debug lista table (opcional)
+      run: |
+        PGPASSWORD=postgres psql -h localhost -U postgres -d test_db -c "SELECT COUNT(*) FROM lista;"
