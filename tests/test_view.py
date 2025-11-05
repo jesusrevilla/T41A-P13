@@ -30,7 +30,7 @@ def test_vista_equipo_existe(cursor):
 
 def test_vista_equipo_matriculas(cursor):
    
-    esperadas = {"182570", "183016", "178584", "17888", "175329"}
+    esperadas = {"182570", "183016", "178584", "177888", "175329"}
     rows = fetchall(cursor, "SELECT matricula FROM vista_equipo")
     obtenidas = {r[0] for r in rows}
     faltantes = esperadas - obtenidas
