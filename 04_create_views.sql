@@ -1,3 +1,3 @@
 CREATE VIEW vista_alumnos AS
-SELECT Apellido FROM lista 
-WHERE Matrícula = '183060' OR Matrícula = '182483' OR Matrícula = '179752';
+SELECT apellido FROM lista 
+WHERE matricula = '183060' OR matricula = '182483' OR matricula = '179752';
