@@ -1,12 +1,10 @@
-CREATE OR REPLACE VIEW vista_ti AS
-SELECT nombre
-FROM empleados
-WHERE departamento = 'TI';
 
 CREATE OR REPLACE VIEW vista_cachorritas AS
-SELECT 
-    e.matricula,
-    l.apellido,
-    e.equipo
-FROM equipo_cachorritas e
-LEFT JOIN lista l ON e.matricula = l.matricula;
+SELECT matricula, apellido
+FROM lista
+WHERE equipo = 'Cachorritas';
+
+CREATE OR REPLACE VIEW vista_ti AS
+SELECT nombre, departamento, salario
+FROM empleados
+WHERE departamento = 'TI';
