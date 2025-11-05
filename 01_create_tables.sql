@@ -7,7 +7,7 @@ CREATE TABLE empleados (
 
 CREATE TABLE lista (
     matricula VARCHAR(10) PRIMARY KEY,
-    apellido VARCHAR(50),
+    apellido VARCHAR(50)
 );
 
 
