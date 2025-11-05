@@ -24,7 +24,7 @@ def test_vista_ti():
     apellidos = [fila[0] for fila in resultados]
     assert 'Guerrero' in  apellidos
     assert 'Castillo' in  apellidos
-        assert 'Vidales' in  apellidos
+    assert 'Vidales' in  apellidos
     cur.close()
     conn.close()
 
