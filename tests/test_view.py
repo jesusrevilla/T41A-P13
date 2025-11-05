@@ -13,9 +13,9 @@ def test_vista_ti():
     resultados = cur.fetchall()
     print("Resultados de vista_alumnos:", resultados)
     apellidos = [fila[0] for fila in resultados]
+    assert 'Vidales' in  apellidos
     assert 'Guerrero' in  apellidos
     assert 'Castillo' in  apellidos
-    assert 'Vidales' in  apellidos
     cur.close()
  
 
