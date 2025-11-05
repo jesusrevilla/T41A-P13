@@ -39,3 +39,4 @@ def test_vista_equipo_matriculas(cursor):
         f"Faltan: {sorted(faltantes)}\n"
         f"Extras: {sorted(extras)}\n"
         f"Obtenidas: {sorted(obtenidas)}"
+        )
