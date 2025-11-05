@@ -16,7 +16,6 @@ def test_vista_ti():
     assert 'Luis' in nombres
     assert 'María' in nombres
     cur.close()
-    conn.close()
 
     cur = conn.cursor()
     cur.execute("SELECT * FROM vista_alumnos;")
