@@ -46,3 +46,8 @@ INSERT INTO equipos (matricula, nombre, numero_equipo) VALUES
 (174653, 'Verástegui', 8),
 (183060, 'Vidales', 1),
 (178218, 'Zúñiga', 5);
+(182712, 'Sánchez', 1),
+(178974, 'Saucedo', 7),
+(174653, 'Verástegui', 8),
+(183060, 'Vidales', 1),
+(178218, 'Zúñiga', 5);
