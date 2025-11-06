@@ -18,4 +18,3 @@ def test_vista_ti():
     assert 'María' in nombres
     cur.close()
     conn.close()
-    
