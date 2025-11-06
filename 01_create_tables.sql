@@ -1,6 +1,5 @@
 
-CREATE TABLE equipos(
-  matricula INTEGER PRIMARY KEY,
-  nombre TEXT NOT NULL,
-  numero_equipo INTEGER
-);
+CREATE VIEW nombre_vista AS
+SELECT columnas
+FROM tabla
+WHERE condiciones;
