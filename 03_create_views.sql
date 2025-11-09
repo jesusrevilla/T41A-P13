@@ -4,9 +4,9 @@ FROM empleados
 WHERE departamento='TI';
 
 
-CREATE VIEW cachorritas AS
-SELECT matricula, apellido
+CREATE VIEW equipoVista AS
+SELECT *
 FROM lista
-WHERE matricula==182483||matricula==179752||matricula==183060
-||matricula==181730||matricula==183213||matricula==182712
-||matricula==179800;
+WHERE matricula=182483 OR matricula=179752 OR matricula=183060
+OR matricula=181730 OR matricula= 183213 OR matricula=182712
+OR matricula=179800;
