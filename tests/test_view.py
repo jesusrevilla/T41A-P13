@@ -12,10 +12,16 @@ def test_vista_ti():
     cur = conn.cursor()
     cur.execute("SELECT * FROM vista_ti;")
     resultados = cur.fetchall()
-    assert len(resultados) == 2  # Solo Luis y María están en TI
-    nombres = [fila[1] for fila in resultados]  # Asumiendo que el nombre está en la segunda columna
+
+    # Verifica que hay 2 empleados en el área de TI
+    assert len(resultados) == 2  # Luis y María
+
+    # Extrae los nombres según la posición de la columna 'nombre'
+    # Si 'nombre' es la segunda columna, usa fila[1]
+    nombres = [fila[1] for fila in resultados]
+
     assert 'Luis' in nombres
     assert 'María' in nombres
+
     cur.close()
     conn.close()
-
