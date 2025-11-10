@@ -1,14 +1,11 @@
 
-CREATE VIEW vista_ti AS 
-SELECT nombre
-FROM empleados
+-- Vista para empleados de TI
+CREATE VIEW vista_ti AS
+SELECT * FROM empleados
 WHERE departamento = 'TI';
 
-SELECT * FROM vista_ti;
-
-CREATE VIEW integrantes AS
-SELECT matricula,nombre
-FROM equipos
-WHERE numero_equipo=5;
-
-SELECT * FROM integrantes;
+-- Vista para compañeros de tu equipo
+CREATE VIEW vista_equipo AS
+SELECT matricula, apellido
+FROM compañeros
+WHERE equipo = 'RadarRide';  -- Cambia el nombre si tu equipo se llama diferente
