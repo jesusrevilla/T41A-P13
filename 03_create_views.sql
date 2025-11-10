@@ -8,4 +8,4 @@ WHERE departamento = 'TI';
 CREATE VIEW vista_equipo AS
 SELECT matricula, apellido
 FROM compañeros
-WHERE equipo = 'RadarRide';  -- Cambia el nombre si tu equipo se llama diferente
+WHERE equipo = 'Equipo 5';
