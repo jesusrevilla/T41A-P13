@@ -1,5 +1,6 @@
 
 import psycopg2
+
 def test_vista_ti():
     conn = psycopg2.connect(
         dbname='test_db',
@@ -9,12 +10,12 @@ def test_vista_ti():
         port='5432'
     )
     cur = conn.cursor()
-    cur.execute(\\"SELECT * FROM vista_ti;\\")
     cur.execute("SELECT * FROM vista_ti;")
     resultados = cur.fetchall()
     assert len(resultados) == 2  # Solo Luis y María están en TI
-    nombres = [fila[0] for fila in resultados]
+    nombres = [fila[1] for fila in resultados]  # Asumiendo que el nombre está en la segunda columna
     assert 'Luis' in nombres
     assert 'María' in nombres
     cur.close()
     conn.close()
+
