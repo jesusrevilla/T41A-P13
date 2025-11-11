@@ -1,5 +1,5 @@
 
--- Tabla empleados
+-- Tabla de empleados
 CREATE TABLE empleados (
     id SERIAL PRIMARY KEY,
     nombre VARCHAR(100),
@@ -7,10 +7,11 @@ CREATE TABLE empleados (
     salario NUMERIC
 );
 
--- Tabla compañeros
-CREATE TABLE compañeros (
-    matricula VARCHAR(10),
-    apellido VARCHAR(100),
-    equipo VARCHAR(50)
+
+-- Tabla de equipo
+CREATE TABLE equipos(
+  matricula INTEGER PRIMARY KEY,
+  nombre TEXT NOT NULL,
+  numero_equipo INTEGER
 );
 
