@@ -12,8 +12,8 @@ def test_vista_ti():
     cur = conn.cursor()
     cur.execute("SELECT * FROM vista_ti;")
     resultados = cur.fetchall()
-    assert len(resultados) == 2  # Luis y María
-    nombres = [fila[1] for fila in resultados]  # Ajusta el índice si 'nombre' está en otra posición
+    assert len(resultados) == 2  # Solo Luis y María están en TI
+    nombres = [fila[0] for fila in resultados]
     assert 'Luis' in nombres
     assert 'María' in nombres
     cur.close()
