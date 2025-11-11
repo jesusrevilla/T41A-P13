@@ -1,11 +1,17 @@
 
 -- Vista para empleados de TI
-CREATE VIEW vista_ti AS
-SELECT * FROM empleados
+CREATE VIEW vista_ti AS 
+SELECT nombre
+FROM empleados
 WHERE departamento = 'TI';
 
+SELECT * FROM vista_ti;
+
+
 -- Vista para compañeros de tu equipo
-CREATE VIEW vista_equipo AS
-SELECT matricula, apellido
-FROM compañeros
-WHERE equipo = 'Equipo 5';
+CREATE VIEW integrantes AS
+SELECT matricula,nombre
+FROM equipos
+WHERE numero_equipo=5;
+
+SELECT * FROM integrantes;
