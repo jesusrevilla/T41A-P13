@@ -1,23 +1,19 @@
-CREATE TABLE empleados (
-    id SERIAL PRIMARY KEY,
-    nombre VARCHAR(100) NOT NULL,
-    departamento VARCHAR(50) NOT NULL,
-    salario NUMERIC NOT NULL
+-- Crear tabla lista
+CREATE TABLE IF NOT EXISTS lista (
+    matricula INT PRIMARY KEY,
+    apellido VARCHAR(100),
+    equipo VARCHAR(50)
 );
 
-CREATE TABLE equipos (
-    equipo_id SERIAL PRIMARY KEY,
-    equipo_nombre VARCHAR(100) NOT NULL UNIQUE
+-- Tabla temporal para importar CSV
+CREATE TEMP TABLE lista_temp (
+    matricula INT,
+    apellido VARCHAR(100)
 );
 
-CREATE TABLE companeros (
-    matricula VARCHAR(50) PRIMARY KEY,
-    apellido VARCHAR(100) NOT NULL,
-    equipo_id INTEGER REFERENCES equipos(equipo_id) ON DELETE SET NULL
-);
-
-CREATE TABLE staging_lista (
-  matricula TEXT,
-  apellido TEXT,
-  equipo_nombre TEXT
+-- Crear tabla empleados
+CREATE TABLE IF NOT EXISTS empleados (
+    nombre VARCHAR(100),
+    departamento VARCHAR(50),
+    salario NUMERIC
 );
