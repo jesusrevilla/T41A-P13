@@ -1,3 +1,9 @@
+DO $$
+BEGIN
+   EXECUTE 'DROP SCHEMA public CASCADE';
+   EXECUTE 'CREATE SCHEMA public';
+   EXECUTE 'GRANT ALL ON SCHEMA public TO public';
+END $$;
 
 CREATE TABLE empleados (
     id SERIAL PRIMARY KEY,
