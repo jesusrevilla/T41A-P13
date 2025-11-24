@@ -19,7 +19,7 @@ def test_vista_ti():
     conn.close()
     
 
-def test_vista_equipo_yaz():
+def test_vista_equipo_rafa():
     conn = psycopg2.connect(
         dbname='test_db',
         user='postgres',
