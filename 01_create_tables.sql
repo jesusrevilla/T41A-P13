@@ -1,14 +1,12 @@
-
-CREATE TABLE lista(
-  matricula INTEGER PRIMARY KEY NOT NULL,
-  apellido VARCHAR(30) NOT NULL
+CREATE TABLE empleados (
+    id SERIAL PRIMARY KEY,
+    nombre VARCHAR(100),
+    departamento VARCHAR(50),
+    salario NUMERIC
 );
 
-CREATE TABLE lista_equipos(
-  matricula INTEGER PRIMARY KEY NOT NULL,
-  apellido VARCHAR(30) NOT NULL,
-  nombre_equipo VARCHAR(25),
-  numero_equipo INTEGER
+CREATE TABLE lista (
+    matricula VARCHAR(10) PRIMARY KEY,
+    apellido VARCHAR(50)
 );
-
 
