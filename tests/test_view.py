@@ -28,7 +28,7 @@ def test_vista_equipo_yaz():
         port='5432'
     )
     cur = conn.cursor()
-    cur.execute("SELECT matricula FROM vista_equipo_yaz;")
+    cur.execute("SELECT matricula FROM vista_equipo_rafa;")
     resultados = [fila[0] for fila in cur.fetchall()]
     
     matriculas_esperadas = [
@@ -42,7 +42,7 @@ def test_vista_equipo_yaz():
     ]
 
     assert sorted(resultados) == sorted(matriculas_esperadas), (
-        f"Las matrículas en vista_equipo_yaz no coinciden.\n"
+        f"Las matrículas en vista_equipo_rafa no coinciden.\n"
         f"Esperado: {sorted(matriculas_esperadas)}\n"
         f"Obtenido: {sorted(resultados)}"
     )
